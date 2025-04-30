@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
+import { Text, TextInput, Button, TouchableOpacity, SafeAreaView } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList } from '../../navigation/AuthStack';
 import { useNavigation } from '@react-navigation/native';
@@ -31,8 +31,8 @@ export function LoginScreen({ onLogin }: Props) {
   };
 
   return (
-    <View style={loginStyles.container}>
-      <Text style={loginStyles.titlelogin}>Olá, seja bem vindo!</Text>
+    <SafeAreaView style={loginStyles.container}>
+      <Text style={loginStyles.titlelogin}>Olá, seja bem!</Text>
       {/* Campo de entrada do nome de usuário */}
       <TextInput
         style={loginStyles.input}
@@ -54,6 +54,6 @@ export function LoginScreen({ onLogin }: Props) {
       <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
         <Text style={loginStyles.link}>Esqueci minha senha</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
