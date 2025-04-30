@@ -8,7 +8,7 @@ export default function App() {
 
   //mostrar nome através do alert
   const mostrarNome = () => {
-    Alert.alert('Nome digitado:', `Olá ${nome} tudo bem?`)
+    Alert.alert('Nome digitado:', `Olá ${nome}, tudo bem?`)
   }
 
   return (
@@ -30,7 +30,6 @@ export default function App() {
 
 const estilo = StyleSheet.create ({
   container:{
-    backgroundColor: 'lightgreen',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -42,10 +41,11 @@ const estilo = StyleSheet.create ({
   },
 
   input:{
+    textAlign: 'center',
     width: 250,
-    borderWidth: 1,
+    borderWidth: 0.5,
     borderColor: 'gray',
-    borderRadius: 5,
+    borderRadius: 20,
     marginTop: 10,
     marginBottom: 12,
   },
